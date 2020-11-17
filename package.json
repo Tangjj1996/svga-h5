@@ -1,0 +1,30 @@
+{
+  "name": "live-svga",
+  "version": "1.0.0",
+  "description": "iframe method load svga",
+  "main": "index.js",
+  "scripts": {
+    "start": "rollup -c",
+    "lint": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tangjj1996/svga-h5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tangjj1996/svga-h5/issues"
+  },
+  "homepage": "https://github.com/Tangjj1996/svga-h5#readme",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "prettier": "^2.1.2",
+    "rollup": "^2.33.2"
+  }
+}
