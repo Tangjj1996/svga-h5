@@ -1,18 +1,20 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve'
+import nodeResolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import html from '@rollup/plugin-html'
+import { babel } from '@rollup/plugin-babel'
 
-export default [
-  {
-    input: path.resolve(__dirname, 'index.html'),
-    output: {
-      file: 'index.html'
-    }
-  },
-  {
-    input: path.resolve(__dirname, 'src/index.js'),
-    file: 'lib/index.js',
+export default {
+  input: 'src/index.js',
+  output: {
+    dir: 'lib',
     format: 'iife',
-    plugin: [
-      nodeResolve()
-    ]
-  }
-]
+  },
+  plugins: [
+    nodeResolve(),
+    commonjs(),
+    html(),
+    babel({
+      presets: ['@babel/preset-env']
+    })
+  ],
+};
