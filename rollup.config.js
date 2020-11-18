@@ -56,7 +56,7 @@ export default {
     ${links}
   </head>
   <body>
-    <div id="qqCanvas"></div>
+    <div id="qqCanvasWebSvga"></div>
     ${scripts}
   </body>
 </html>`;
