@@ -19,7 +19,7 @@ const makeHtmlAttributes = (attributes) => {
 export default {
   input: 'src/index.js',
   output: {
-    dir: 'lib',
+    dir: 'dist',
     format: 'iife',
   },
   plugins: [

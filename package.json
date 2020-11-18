@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint . --fix && prettier . --write",
-    "serve": "live-server --open=lib -V"
+    "serve": "live-server --open=dist -V"
   },
   "repository": {
     "type": "git",
