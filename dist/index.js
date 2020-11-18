@@ -28,11 +28,12 @@
 	var SVGA = /*@__PURE__*/getDefaultExportFromCjs(svga_min);
 
 	var root = document.getElementById('qqCanvasWebSvga');
-	root.style.width = '200px';
-	root.style.height = '200px';
+	root.style.width = '353px';
+	root.style.height = '156.67px';
 	var player = new SVGA.Player('#qqCanvasWebSvga');
 	var parser = new SVGA.Parser('#qqCanvasWebSvga');
 	player.loops = 1;
+	player.clearsAfterStop = false;
 	parser.load('assets/test.svga', function (videoItem) {
 	  player.setVideoItem(videoItem);
 	  player.startAnimation();
@@ -40,11 +41,11 @@
 	player.onFinished(function () {
 	  console.log('finished::');
 	});
-	player.onFrame(function (frame) {
-	  console.log('frame::' + frame);
-	});
+	player.onFrame(function (frame) {});
 	player.onPercentage(function (percentage) {
-	  console.log('percentage::' + percentage);
+	  if (percentage > 0.8) {
+	    player.stepToFrame(10, true);
+	  }
 	});
 
 }());

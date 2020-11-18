@@ -4,6 +4,7 @@
   "description": "iframe method load svga",
   "main": "index.js",
   "scripts": {
+    "start": "rollup -c --watch",
     "build": "rollup -c",
     "lint": "eslint . --fix && prettier . --write",
     "build:server": "live-server --open=dist -V",
