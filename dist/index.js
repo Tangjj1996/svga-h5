@@ -29,7 +29,7 @@
 
 	var player = new SVGA.Player('#qqCanvas');
 	var parser = new SVGA.Parser('#qqCanvas');
-	parser.load('asset/test.svga', function (videoItem) {
+	parser.load('assets/test.svga', function (videoItem) {
 	  player.setVideoItem(videoItem);
 	  player.startAnimation();
 	});
